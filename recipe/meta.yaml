@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
-  sha256: f4254b740d4c9a7efb566e7c014b993dc8a51cdb5674a0cdfdc5261674f94399
+  sha256: 35499587f2f5bf12070939769ffdfed76ed9470936dcd9f7c4f93dacf58ce9c4
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and vc<14) or ppc64le or py36]
   script: {{ PYTHON }} -m pip install . -vv
 
