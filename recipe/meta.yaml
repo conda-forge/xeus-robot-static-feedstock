@@ -1,5 +1,5 @@
 {% set name = "xeus-robot-static" %}
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
-  sha256: 032993fc51b0d60c9966f4691c3aeacf97c650a6e49238701d3fc361925da9db
+  sha256: 817ca4aa4f2c7d735a5f890ad4d979cfe770d7ed73bec6f7f31e988e59e456b4
 
 build:
   number: 0
