@@ -1,5 +1,5 @@
 {% set name = "xeus-robot-static" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
-  sha256: 817ca4aa4f2c7d735a5f890ad4d979cfe770d7ed73bec6f7f31e988e59e456b4
+  sha256: 21467a34dba4a6e56f2a7029f94fb3597de14aa28938fc1c140721364b5c094c
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - nasm                                   # [win]
   run:
     - python
-    - robotframework-interpreter  >=0.6.6,<0.7
+    - robotframework-interpreter  >=0.7.0,<0.8
     - robotframework-lsp  >=0.14,<0.15
     - jupyterlab_robotmode
     - ipython  >=7.20,<8
