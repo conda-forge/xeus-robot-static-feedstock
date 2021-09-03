@@ -8,9 +8,14 @@ package:
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
   sha256: c2bfe4c161210b6872af64b6d947d32343c03fb7f45a55521f8a586b7fe814fc
+  patches:
+    # Disable cpack rules when building zeromq (fixed upstream)
+    - 0001-Disable-cpack.patch
+    # Pin pillow dependency (fixed upstream)
+    - 0002-Pin-Pillow-dependency.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and vc<14) or ppc64le or py36]
   script: {{ PYTHON }} -m pip install . -vv
 
