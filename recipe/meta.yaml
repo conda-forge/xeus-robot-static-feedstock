@@ -1,5 +1,5 @@
 {% set name = "xeus-robot-static" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,10 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
-  sha256: c2bfe4c161210b6872af64b6d947d32343c03fb7f45a55521f8a586b7fe814fc
-  patches:
-    # Disable cpack rules when building zeromq (fixed upstream)
-    - 0001-Disable-cpack.patch
-    # Pin pillow dependency (fixed upstream)
-    - 0002-Pin-Pillow-dependency.patch
+  sha256: ccc61c8e418fd46a986bb761ffb7bf4eda7b1986acdf192cc16aad5072fecb7e
 
 build:
-  number: 1
+  number: 0
   skip: true  # [(win and vc<14) or ppc64le or py36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -36,7 +31,7 @@ requirements:
     - nasm                                   # [win]
   run:
     - python
-    - robotframework-interpreter  >=0.7.0,<0.8
+    - robotframework-interpreter  >=0.7.3,<0.8
     - robotframework-lsp  >=0.14,<0.15
     - jupyterlab_robotmode
     - ipython  >=7.20,<8
