@@ -1,5 +1,5 @@
 {% set name = "xeus-robot-static" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-robot-wheel/archive/{{ version }}.tar.gz
-  sha256: 2dcc84a1140f2f21fb0ed8066563172d0e8c3f43ec94985274c141f391f9abde
+  sha256: 2a82865762a56e6284504fe3fe6a333c38ac8c11bfc97d7005346265bbb4887a
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
   run:
     - python
     - xeus-python-static  >=0.13,<0.14
-    - robotframework-interpreter  >=0.7.3,<0.8
+    - robotframework-interpreter  >=0.7.4,<0.8
     - robotframework-lsp  >=0.14,<0.15
     - jupyterlab_robotmode
     - ipywidgets
